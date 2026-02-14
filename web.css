@@ -1,0 +1,13 @@
+.pclass1{
+    color: rgb(14, 12, 12);
+    background-color: rgb(145, 152, 147);
+
+}
+.pclass2{
+    background-color:transparent;
+    text-justify: auto;
+    color: rosybrown;
+}
+*{
+    background-color: rgb(215, 242, 215);
+}
