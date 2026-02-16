@@ -8,6 +8,29 @@
     color: white;
 }
 
-*{
+body{
     background-color: rgb(215, 242, 215);
+}
+
+/* Make tables full-width on small screens */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    td {
+        display: block;
+        width: 100%;
+    }
+    td img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Make gallery images full-width on small screens */
+@media (max-width: 480px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
