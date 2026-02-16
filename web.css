@@ -4,7 +4,6 @@
   
 }
 .class1{
-    background-color:black;
     color: white;
 }
 
@@ -12,25 +11,76 @@ body{
     background-color: rgb(215, 242, 215);
 }
 
-/* Make tables full-width on small screens */
-@media (max-width: 768px) {
-    table {
-        width: 100%;
-    }
-    td {
-        display: block;
-        width: 100%;
-    }
-    td img {
-        width: 100%;
-        height: auto;
+.animal-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.animal-section td {
+    text-align: center;
+}
+
+.animal-section img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.wildlife-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adds space between images */
+}
+
+.wildlife-gallery img {
+    flex: 1 1 22%; /* Allows 4 images per row, with wrapping */
+    max-width: 22%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.wildlife-gallery details {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .wildlife-gallery img {
+        flex: 1 1 30%; /* 3 images per row on tablets */
+        max-width: 30%;
     }
 }
 
-/* Make gallery images full-width on small screens */
-@media (max-width: 480px) {
-    img {
+@media (max-width: 768px) {
+    table, .animal-section {
         width: 100%;
-        height: auto;
+    }
+    td, .animal-section td {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .animal-section img, td img {
+        width: 100%;
+        height: auto; /* Full width on mobile */
+    }
+
+    .wildlife-gallery img {
+        flex: 1 1 45%; /* 2 images per row on smaller tablets/large phones */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wildlife-gallery img {
+        flex: 1 1 100%; /* 1 image per row on small phones */
+        max-width: 100%;
     }
 }
