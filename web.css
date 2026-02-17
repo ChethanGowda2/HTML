@@ -41,7 +41,7 @@ body{
     max-width: 22%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .wildlife-gallery details {
